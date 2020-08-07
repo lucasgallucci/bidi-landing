@@ -185,13 +185,17 @@ section {
 }
 
 #contenido,
-#cliente {
+#clientes {
   .editorial {
     padding: 20px 15px;
     .img {
       margin-bottom: 10px;
       border: 1px solid #ccc;
       padding: 10px;
+    }
+
+    h6 {
+      display: inline;
     }
   }
 }
@@ -207,11 +211,29 @@ section {
 }
 
 .nosotros {
-  padding-bottom: 10px;
+  background: url('../img/bg-reading.jpg');
+  background-position: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: white;
 }
 
 .ubicacion {
-  padding-top: 10px;
+  h4 {
+    margin-bottom: 30px;
+  }
+  address {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: 30px;
+      height: 4px;
+      background: gray;
+    }
+  }
 }
 
 .bandera {

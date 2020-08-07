@@ -166,14 +166,18 @@ section h3 {
 }
 
 #contenido .editorial,
-#cliente .editorial {
+#clientes .editorial {
   padding: 20px 15px;
 }
 #contenido .editorial .img,
-#cliente .editorial .img {
+#clientes .editorial .img {
   margin-bottom: 10px;
   border: 1px solid #ccc;
   padding: 10px;
+}
+#contenido .editorial h6,
+#clientes .editorial h6 {
+  display: inline;
 }
 
 .editoriales-listado {
@@ -187,11 +191,27 @@ section h3 {
 }
 
 .nosotros {
-  padding-bottom: 10px;
+  background: url("../img/bg-reading.jpg");
+  background-position: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: white;
 }
 
-.ubicacion {
-  padding-top: 10px;
+.ubicacion h4 {
+  margin-bottom: 30px;
+}
+.ubicacion address {
+  position: relative;
+}
+.ubicacion address:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 30px;
+  height: 4px;
+  background: gray;
 }
 
 .bandera {
