@@ -3,28 +3,31 @@
 $titulos: 'Zilla Slab', serif;
 $texto: 'Roboto', sans-serif;
 
+$paradise-pink: #ef476fff;
+$orange-yellow-crayola: #ffd166ff;
+$caribbean-green: #06d6a0ff;
+$blue-ncs: #118ab2ff;
+$midnight-green-eagle-green: #073b4cff;
+
 .gradient1 {
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#87e0fd+0,53cbf1+40,05abe0+100;Blue+3D+%23+16 */
-  background: #87e0fd; /* Old browsers */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/$blue-ncs+0,53cbf1+40,05abe0+100;Blue+3D+%23+16 */
+  background: $blue-ncs; /* Old browsers */
   background: -moz-linear-gradient(
     -45deg,
-    #87e0fd 0%,
-    #53cbf1 40%,
-    #05abe0 100%
+    $blue-ncs 0%,
+    $midnight-green-eagle-green 100%
   ); /* FF3.6-15 */
   background: -webkit-linear-gradient(
     -45deg,
-    #87e0fd 0%,
-    #53cbf1 40%,
-    #05abe0 100%
+    $blue-ncs 0%,
+    $midnight-green-eagle-green 100%
   ); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(
     135deg,
-    #87e0fd 0%,
-    #53cbf1 40%,
-    #05abe0 100%
+    $blue-ncs 0%,
+    $midnight-green-eagle-green 100%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$blue-ncs', endColorstr='#05abe0',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 body {
@@ -79,6 +82,10 @@ header {
     background-color: black;
     opacity: 0.5;
     z-index: 1;
+  }
+
+  .logo {
+    max-width: 250px;
   }
 }
 
@@ -162,11 +169,9 @@ section {
 #caracteristicas {
   @extend .gradient1;
   .items {
-    display: flex;
     list-style: none;
     padding: 20px 0;
-    justify-content: space-between;
-    li {
+    li > div {
       text-align: center;
       padding: 20px 0;
       box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
@@ -179,6 +184,7 @@ section {
       }
       p {
         font-family: $titulos;
+        font-size: 22px;
       }
     }
   }
@@ -224,6 +230,7 @@ section {
   }
   address {
     position: relative;
+    margin-top: 30px;
     &:before {
       content: '';
       position: absolute;
@@ -233,9 +240,48 @@ section {
       height: 4px;
       background: gray;
     }
+    strong {
+      font-family: $titulos;
+      text-transform: uppercase;
+    }
+    small {
+      min-height: 35px;
+      display: block;
+    }
   }
 }
 
 .bandera {
   max-width: 15px;
+}
+
+#contacto {
+  label {
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #999;
+  }
+  input,
+  select,
+  textarea {
+    background: white;
+    border: none;
+    font-size: 12px;
+    color: #444;
+  }
+
+  .bandera {
+    max-width: 25px;
+  }
+
+  .form {
+    background: #eee;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  strong {
+    display: block;
+    font-family: $titulos;
+  }
 }
