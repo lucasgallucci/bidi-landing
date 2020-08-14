@@ -41,7 +41,7 @@ header {
 }
 header video {
   position: absolute;
-  top: 50%;
+  top: 60px;
   left: 50%;
   min-width: 100%;
   min-height: 100%;
@@ -70,10 +70,27 @@ header .overlay {
 header .logo {
   max-width: 250px;
 }
+@media (max-width: 700px) {
+  header h1 {
+    font-size: 3.5rem !important;
+  }
+}
+@media (max-width: 550px) {
+  header h1 {
+    font-size: 3rem !important;
+  }
+}
+@media (max-width: 550px) {
+  header .lead {
+    font-size: 1rem;
+  }
+}
 
 @media (pointer: coarse) and (hover: none) {
   header {
-    background: url("https://source.unsplash.com/XT5OInaElMw/1600x900") black no-repeat center center scroll;
+    background: url("../img/back-header.jpg") black no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
   }
 
   header video {
@@ -145,6 +162,23 @@ section h3 {
   z-index: 999;
   position: relative;
 }
+@media (max-width: 770px) {
+  #info .pasos {
+    flex-wrap: wrap;
+  }
+  #info .pasos li {
+    width: 50%;
+  }
+  #info .pasos:after {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  #info .pasos li {
+    width: 70%;
+    margin: auto;
+  }
+}
 
 #caracteristicas .items {
   list-style: none;
@@ -157,6 +191,7 @@ section h3 {
   padding: 30px;
   border-radius: 10px;
   background: white;
+  margin-bottom: 30px;
 }
 #caracteristicas .items li > div img {
   max-width: 150px;
@@ -199,7 +234,13 @@ section h3 {
   background-repeat: no-repeat;
   color: white;
 }
+.nosotros .logo {
+  max-width: 250px;
+}
 
+.ubicacion {
+  background-color: #eeeeee;
+}
 .ubicacion h4 {
   margin-bottom: 30px;
 }
