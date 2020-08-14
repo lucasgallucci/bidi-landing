@@ -89,12 +89,7 @@ header .logo {
 @media (pointer: coarse) and (hover: none) {
   header {
     background: url("../img/back-header.jpg") black no-repeat center center;
-    background-attachment: fixed;
     background-size: cover;
-  }
-
-  header video {
-    display: none;
   }
 }
 section {
